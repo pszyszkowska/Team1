@@ -15,7 +15,7 @@ def podaj_wiek():
 def podaj_plec():
     while True:
         plec = input('Podaj swoją płeć (K/M): ')
-        if plec in ['K', 'M']:
+        if plec.upper() in ['K', 'M']:
             return plec
         else:
             print("Płeć nie rozpoznana. Proszę wybrać jedną z opcji K lub M.")
