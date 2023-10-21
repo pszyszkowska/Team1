@@ -6,7 +6,7 @@ def get_age():
             wiek = input('Podaj swój wiek: ')
             wiek = int(wiek)
             if wiek < 0 or wiek >= 120:
-                print("Podany wiek jest nieprawidłowy. Wprowadź go ponownie.")
+                print("Jesteś duchem? Podany wiek jest nieprawidłowy. Wprowadź go ponownie.")
             else:
                 return wiek
         except ValueError:
