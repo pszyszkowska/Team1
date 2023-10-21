@@ -10,3 +10,14 @@ if today_date >= birthday:
     print("Jesteś pełnoletni!")
 else:
     print("Nie jesteś pełnoletni!")
+
+# Wybor regionu
+region = input("Czy jestes z regionu EUR czy z USA \n")
+
+    # zastosowanie petli ktora wy
+
+while not ((region == "EUR") or (region == "USA")):
+    try:
+        region = input("Kraj nie rozpoznany, Prosze wybrac jedna z opcji EUR albo USA \n")
+    except ValueError:
+        print("Fatal Error Crash")
