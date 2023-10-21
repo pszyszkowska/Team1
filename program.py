@@ -16,3 +16,7 @@ while not ((region == "EUR") or (region == "USA")):
         region = input("Kraj nie rozpoznany, Prosze wybrac jedna z opcji EUR albo USA \n")
     except ValueError:
         print("Fatal Error Crash")
+while wiek >= 120:
+    print("Jestes duchem? Wprowadz swoj wiek ponownie.")
+    wiek = int(input("Podaj jeszcze raz swoj wiek: "))
+    continue
