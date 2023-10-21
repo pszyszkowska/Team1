@@ -11,4 +11,4 @@ Stworzone zostały następujące funkcjonalności:
  - facet +40 z USA pierwsza paczka Malboro gratis (Patrycja)
  - utworzenie dokumentacji README dla wersji v 1.0 (Patrycja)
 
-Finalna wersja utworzona 15:00
+Finalna wersja utworzona 15:00.
