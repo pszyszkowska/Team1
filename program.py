@@ -1,6 +1,6 @@
 from datetime import date
 
-def get_age():
+def podaj_wiek():
     while True:
         try:
             wiek = input('Podaj swój wiek: ')
@@ -12,7 +12,7 @@ def get_age():
         except ValueError:
             print("Podana wartość nie jest liczbą.")
 
-def get_gender():
+def podaj_plec():
     while True:
         plec = input('Podaj swoją płeć (K/M): ')
         if plec in ['K', 'M']:
@@ -20,7 +20,7 @@ def get_gender():
         else:
             print("Płeć nie rozpoznana. Proszę wybrać jedną z opcji K lub M.")
 
-def get_region():
+def podaj_region():
     while True:
         region = input("Czy jesteś z regionu EUR czy z USA (EUR/USA): ")
         if region in ['EUR', 'USA']:
@@ -29,9 +29,9 @@ def get_region():
             print("Kraj nie rozpoznany. Proszę wybrać jedną z opcji EUR albo USA.")
 
 def main():
-    wiek = get_age()
-    plec = get_gender()
-    region = get_region()
+    wiek = podaj_wiek()
+    plec = podaj_plec()
+    region = podaj_region()
 
     if plec == 'M' and wiek >= 40 and region == 'USA':
         print("Pierwsza paczka Marboro gratis!")
