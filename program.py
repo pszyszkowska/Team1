@@ -23,7 +23,7 @@ def podaj_plec():
 def podaj_region():
     while True:
         region = input("Czy jesteś z regionu EUR czy z USA (EUR/USA): ")
-        if region in ['EUR', 'USA']:
+        if region.upper() in ['EUR', 'USA']:
             return region
         else:
             print("Kraj nie rozpoznany. Proszę wybrać jedną z opcji EUR albo USA.")
@@ -38,7 +38,7 @@ def main():
     elif wiek >= 30 and plec == "K":
         print("Darmowy drink")
     else:
-        print("Nie spełniasz warunków, aby otrzymać darmowe paczki Marboro lub drinka.")
+        print("Nie spełniasz warunków, aby skorzystać z promocji.")
 
 if __name__ == "__main__":
     main()
