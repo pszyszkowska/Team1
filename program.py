@@ -2,6 +2,10 @@ from datetime import date
 
 wiek = int(input('Podaj swój wiek:'))
 plec = input('Podaj swoja plec: K/M')
+if plec !='k' or plec !='m':
+    print("podaj poprawną plec")
+else:
+    print("oki")
 region = input("Czy jestes z regionu EUR czy z USA \n")
 if plec == 'M' and wiek >= 40 and region == 'USA':
     print("Pierwsza paczka Marboro gratis!")
