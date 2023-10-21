@@ -1,9 +1,9 @@
 from datetime import date
 
 wiek = input('Podaj swój wiek:')
-while not wiek.strip().isdigit():
+while not (wiek.strip().isdigit() and int(wiek) <= 120):
     try:
-        wiek = input("Liczba nie rozpoznana.\n Podaj swój wiek: ")
+        wiek = input("Liczba nie rozpoznana, badz masz powyzej 120 lat.\n Podaj swój wiek: ")
     except ValueError:
         print("Fatal Error Crash")
 plec = input('Podaj swoja plec: K/M')
@@ -22,10 +22,6 @@ if plec == 'M' and int(wiek) >= 40 and region == 'USA':
     print("Pierwsza paczka Marboro gratis!")
 else:
     exit()
-while int(wiek) >= 120:
-    print("Jestes duchem? Wprowadz swoj wiek ponownie.")
-    wiek = int(input("Podaj jeszcze raz swoj wiek: "))
-    continue
 if int(wiek) >= 30 and plec == "K":
     print("Darmowy drink")
 else:
