@@ -1,32 +1,44 @@
 from datetime import date
 
-wiek = input('Podaj swój wiek:')
-while not wiek.strip().isdigit():
-    try:
-        wiek = input("Liczba nie rozpoznana.\n Podaj swój wiek: ")
-    except ValueError:
-        print("Fatal Error Crash")
-plec = input('Podaj swoja plec: K/M')
-while not ((plec == "K") or (plec == "M")):
-    try:
-        plec = input("Płeć nie rozpoznana.\n Proszę wybrać jedną z opcji K lub M \n")
-    except ValueError:
-        print("Fatal Error Crash")
-region = input("Czy jestes z regionu EUR czy z USA \n")
-while not ((region == "EUR") or (region == "USA")):
-    try:
-        region = input("Kraj nie rozpoznany, Prosze wybrac jedna z opcji EUR albo USA \n")
-    except ValueError:
-        print("Fatal Error Crash")
-if plec == 'M' and int(wiek) >= 40 and region == 'USA':
-    print("Pierwsza paczka Marboro gratis!")
-else:
-    exit()
-while int(wiek) >= 120:
-    print("Jestes duchem? Wprowadz swoj wiek ponownie.")
-    wiek = int(input("Podaj jeszcze raz swoj wiek: "))
-    continue
-if int(wiek) >= 30 and plec == "K":
-    print("Darmowy drink")
-else:
-    exit()
+def get_age():
+    while True:
+        try:
+            wiek = input('Podaj swój wiek: ')
+            wiek = int(wiek)
+            if wiek < 0 or wiek >= 120:
+                print("Podany wiek jest nieprawidłowy. Wprowadź go ponownie.")
+            else:
+                return wiek
+        except ValueError:
+            print("Podana wartość nie jest liczbą.")
+
+def get_gender():
+    while True:
+        plec = input('Podaj swoją płeć (K/M): ')
+        if plec in ['K', 'M']:
+            return plec
+        else:
+            print("Płeć nie rozpoznana. Proszę wybrać jedną z opcji K lub M.")
+
+def get_region():
+    while True:
+        region = input("Czy jesteś z regionu EUR czy z USA (EUR/USA): ")
+        if region in ['EUR', 'USA']:
+            return region
+        else:
+            print("Kraj nie rozpoznany. Proszę wybrać jedną z opcji EUR albo USA.")
+
+def main():
+    wiek = get_age()
+    plec = get_gender()
+    region = get_region()
+
+    if plec == 'M' and wiek >= 40 and region == 'USA':
+        print("Pierwsza paczka Marboro gratis!")
+    elif wiek >= 30 and plec == "K":
+        print("Darmowy drink")
+    else:
+        print("Nie spełniasz warunków, aby otrzymać darmowe paczki Marboro lub drinka.")
+
+if __name__ == "__main__":
+    main()
